@@ -1,0 +1,97 @@
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   font-family: 'Inter', sans-serif;
+   font-family: 'Lexend Deca', sans-serif;
+   font-family: 'Inter', sans-serif;
+   font-family: 'Lexend Deca', sans-serif;
+}
+body {
+   background-color: var(--very-dark-blue);
+   font-size: 15px;
+}
+:root {
+   /* Primary */
+   --very-dark-blue: hsl(233, 47%, 7%); /* Background */
+   --dark-desaturated-blue: hsl(244, 38%, 16%); /* Card background */
+   --soft-violet: hsl(277, 64%, 61%); /* accent */
+   /* Neutral */
+   --white: hsl(0, 0%, 100%); /* Main heading and stats */
+   --p-slightly-transparent-white: hsla(0, 0%, 100%, 0.75); /* Paragraph */
+   --h-slightly-transparent-white: hsla(0, 0%, 100%, 0.6);
+}
+.container {
+   display: flex;
+   box-shadow: 0 0 1px 0 rgb(78, 78, 78);
+   border-radius: 5px;
+}
+@media (min-width: 1200px) {
+   .container {
+      width: 1000px;
+      height: 370px;
+      margin: 100px auto;
+   }
+}
+@media (max-width: 767px) {
+   .container {
+      width: 90%;
+      margin: 70px auto;
+      flex-direction: column-reverse;
+   }
+}
+.container .left {
+   width: 50%;
+   padding: 57px;
+   background-color: var(--dark-desaturated-blue);
+}
+.container .left h1 {
+   color: var(--white);
+}
+.container .left h1 span {
+   color: var(--soft-violet);
+}
+.container .left p {
+   color: var(--p-slightly-transparent-white);
+   opacity: 0.7;
+   line-height: 1.7;
+}
+.container .left > p {
+   margin: 20px 0 50px 0;
+}
+.container .left .stats {
+   display: flex;
+}
+.container .left .stats > div {
+   margin-right: 40px;
+}
+.container .left .stats h2 {
+   color: var(--white);
+
+}
+@media (max-width: 767px) {
+   .container .left .stats {
+      flex-direction: column;
+   }
+}
+.container img {
+   position: relative;
+   filter: brightness(1%);
+   width: 50%;
+   border-top-right-radius: 10px;
+   border-bottom-right-radius: 10px;
+}
+@media (max-width: 767px) {
+   .container .left,
+   .container img {
+      width: 100%;
+      text-align: center;
+   }
+   .container .left .stats > div {
+      margin: 15px 0;
+   }
+   .container img {
+      border-top-left-radius: 10px;
+      border-bottom-right-radius: 0;
+   } 
+}
